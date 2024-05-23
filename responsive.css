@@ -1,0 +1,30 @@
+@media screen and (max-width: 768px) {
+  .topbutton {
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+  }
+
+  /*header*/
+
+  .windows-inner {
+    font-size: 25px;
+  }
+  /* .circle-menu {
+ 
+  } */
+  .circle-menu-wrap {
+    margin: 0 auto;
+  }
+  /*main*/
+
+  /*section*/
+
+  /*footer*/
+
+  .contact-me h1 {
+    font-size: 60px;
+    margin-top: 30px;
+  }
+}

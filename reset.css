@@ -1,0 +1,22 @@
+/*font*/
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+
+@font-face {
+  font-family: "gen";
+  src: url("./font/GenEi-P-Heavy_ver8.otf");
+}
+
+/*reset css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  caret-color: transparent;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
