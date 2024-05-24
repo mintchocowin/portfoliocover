@@ -27,3 +27,15 @@ window.addEventListener("scroll", function buttonshow() {
     topbutton.classList.remove("show");
   }
 });
+
+//explanation
+const buttons = document.querySelectorAll(".skills-button ul li");
+
+buttons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    buttons.forEach(function (button) {
+      button.classList.remove("active");
+    });
+    button.classList.add("active");
+  });
+});

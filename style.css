@@ -95,7 +95,7 @@ header {
   color: #f81894;
   height: 40px;
   text-align: right;
-  padding: 7px;
+  padding: 10px;
   letter-spacing: 5px;
 }
 
@@ -118,7 +118,6 @@ main {
   width: 100%;
   height: 25%;
   position: relative;
-  border: 1px solid skyblue;
 }
 
 main .circle nav a:nth-child(2) {
@@ -127,7 +126,7 @@ main .circle nav a:nth-child(2) {
 }
 .main-contents {
   position: absolute;
-  width: 80%;
+  width: 90%;
   height: 75%;
   top: 60%;
   left: 50%;
@@ -146,14 +145,18 @@ main .circle nav a:nth-child(2) {
 }
 
 .profile-text {
+  /* border: 1px solid #f00; */
+  width: 50%;
+  height: 150px;
   position: absolute;
   top: 7%;
   right: 15px;
   text-align: center;
+  font-size: 15px;
 }
 
 .profile-text p:nth-child(1) {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .skills {
   position: absolute;
@@ -164,6 +167,8 @@ main .circle nav a:nth-child(2) {
 }
 .skills-button > ul {
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 .skills-button > ul > li {
   display: flex;
@@ -172,17 +177,24 @@ main .circle nav a:nth-child(2) {
   text-align: center;
   border: 2px solid #f81894;
   border-radius: 10px;
-  /* width: 150px; */
+  width: 150px;
   height: 40px;
   padding: 2px;
-  margin-right: 60px;
+  margin: 0 4px;
+}
+
+.skills-button > ul > li.active {
+  border: 2px solid #fff;
 }
 
 .skills-explanation {
   border: 3px solid #f81894;
+  border-radius: 10px;
   width: 100%;
   height: 76%;
   margin-top: 38px;
+  padding: 10px;
+  text-align: center;
 }
 
 /*##section##*/

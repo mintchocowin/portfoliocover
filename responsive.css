@@ -1,3 +1,22 @@
+/* tablet */
+@media screen and (max-width: 1200px) {
+  .main-contents {
+    width: 95%;
+  }
+  .profile {
+    width: 40%;
+    height: 85%;
+  }
+  .profile-text {
+    font-size: 0.8rem;
+  }
+
+  .skills-button ul li {
+    font-size: 10px;
+  }
+}
+
+/* mobile */
 @media screen and (max-width: 768px) {
   .topbutton {
     bottom: 20px;
@@ -11,20 +30,85 @@
   .windows-inner {
     font-size: 25px;
   }
-  /* .circle-menu {
- 
-  } */
+
   .circle-menu-wrap {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .circle nav a {
+    width: 16px;
+    height: 16px;
+  }
+
+  .circle-name ul li {
+    font-size: 14px;
+  }
+  .circle-name ul li:nth-child(3) {
+    left: 217px;
+  }
+  .circle-name ul li:nth-child(4) {
+    left: 311px;
+  }
+
+  /*main*/
+  .main-contents {
+    width: 100%;
+    height: 100%;
+    border: 1px solid purple;
+  }
+  .profile {
+    width: 200px;
+    height: 200px;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .profile-text {
+    top: 45%;
+    font-size: 12px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+  }
+
+  .skills {
+    width: 100%;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .skills-button > ul {
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
     margin: 0 auto;
   }
-  /*main*/
 
+  .skills-button > ul > li {
+    min-width: 5em;
+    font-size: 10px;
+    margin-top: 10px;
+  }
+
+  .skills-explanation {
+    width: 90%;
+    height: 40%;
+    font-size: 12px;
+    margin: 30px auto 0;
+  }
   /*section*/
 
   /*footer*/
 
   .contact-me h1 {
-    font-size: 60px;
+    font-size: 50px;
     margin-top: 30px;
+  }
+
+  .email a i {
+    font-size: 300px;
+    margin-top: 70px;
   }
 }
