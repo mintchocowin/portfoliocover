@@ -8,6 +8,7 @@
   background: #000;
   font-family: "Limelight", sans-serif;
   color: #fff;
+  overflow: hidden;
 }
 
 .topbutton {
@@ -207,6 +208,43 @@ section {
 section .circle nav a:nth-child(3) {
   background: #f81894;
   box-shadow: none;
+}
+
+section > .fa-solid {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 35px;
+  cursor: pointer;
+}
+section > .fa-solid:hover {
+  color: #f81894;
+}
+.fa-chevron-left {
+  left: 5%;
+}
+.fa-chevron-right {
+  right: 5%;
+}
+
+.section-wrapper {
+  width: 200%;
+  height: 90%;
+  display: flex;
+  position: relative;
+}
+.sectionpart {
+  width: 100%;
+  height: inherit;
+}
+
+.example-wrapper {
+  width: 90%;
+  height: inherit;
+  border: 1px solid skyblue;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /*##footer##*/

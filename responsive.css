@@ -25,6 +25,9 @@
     height: 70px;
   }
 
+  .circle-menu-wrap {
+    top: -2px;
+  }
   /*header*/
 
   .windows-inner {
@@ -99,6 +102,10 @@
     margin: 30px auto 0;
   }
   /*section*/
+
+  .sectionpart > .fa-solid {
+    font-size: 25px;
+  }
 
   /*footer*/
 
