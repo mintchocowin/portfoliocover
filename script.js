@@ -1,11 +1,31 @@
-//email
-const emailAddress = "sliuy59@gmail.com";
+//menu button
+
+document.querySelector(".button").addEventListener("click", function () {
+  document.querySelector("main").scrollIntoView({ behavior: "smooth" });
+});
 
 document
-  .getElementById("email-contact")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    window.location.href = "mailto:" + emailAddress;
+  .querySelector("nav a:nth-child(1)")
+  .addEventListener("click", function () {
+    document.querySelector("header").scrollIntoView({ behavior: "smooth" });
+  });
+
+document
+  .querySelector("nav a:nth-child(2)")
+  .addEventListener("click", function () {
+    document.querySelector("main").scrollIntoView({ behavior: "smooth" });
+  });
+
+document
+  .querySelector("nav a:nth-child(3)")
+  .addEventListener("click", function () {
+    document.querySelector("section").scrollIntoView({ behavior: "smooth" });
+  });
+
+document
+  .querySelector("nav a:nth-child(4)")
+  .addEventListener("click", function () {
+    document.querySelector("footer").scrollIntoView({ behavior: "smooth" });
   });
 
 //topbutton
@@ -39,3 +59,12 @@ buttons.forEach(function (button) {
     button.classList.add("active");
   });
 });
+
+//email
+const emailAddress = "sliuy59@gmail.com";
+
+document
+  .querySelector(".fa-paper-plane")
+  .addEventListener("click", function () {
+    window.location.href = "mailto:" + emailAddress;
+  });

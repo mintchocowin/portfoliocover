@@ -9,6 +9,7 @@
   font-family: "Limelight", sans-serif;
   color: #fff;
   overflow: hidden;
+  position: relative;
 }
 
 .topbutton {
@@ -18,11 +19,12 @@
   width: 80px;
   height: 80px;
   cursor: pointer;
-  opacity: 0;
+  display: none;
+  z-index: 100;
 }
 
 .topbutton.show {
-  opacity: 1;
+  display: block;
 }
 
 .circle-menu {
@@ -78,6 +80,7 @@
 
 /*##header##*/
 header {
+  position: relative;
   height: 25%;
 }
 .windows {
@@ -105,6 +108,9 @@ header {
   padding: 35px;
 }
 
+.button {
+  cursor: pointer;
+}
 /* @keyframes textslide {
   0% {
     transform: translateX(0);
@@ -143,6 +149,11 @@ main .circle nav a:nth-child(2) {
   top: 7%;
   border: 3px solid #f81894;
   border-radius: 10px;
+}
+
+.profile > img {
+  width: 100%;
+  height: 100%;
 }
 
 .profile-text {
@@ -226,25 +237,25 @@ section > .fa-solid:hover {
 .fa-chevron-right {
   right: 5%;
 }
-
-.section-wrapper {
+.section-context {
   width: 200%;
+  height: 100%;
+}
+.section-context-main {
+  width: 100%;
   height: 90%;
   display: flex;
   position: relative;
 }
-.sectionpart {
-  width: 100%;
+.sectionpart-1 {
+  border: 1px solid skyblue;
+  width: 50%;
   height: inherit;
 }
-
-.example-wrapper {
-  width: 90%;
-  height: inherit;
+.sectionpart-2 {
   border: 1px solid skyblue;
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 50%;
+  height: inherit;
 }
 
 /*##footer##*/
@@ -272,14 +283,14 @@ footer .circle nav a:nth-child(4) {
   color: #fff;
 }
 
-.email a i {
+.email i {
   font-size: 350px;
   margin-top: 40px;
   color: #f81894;
   transition: all 0.5s;
 }
 
-.email a i:hover {
+.email i:hover {
   color: #fff;
   text-shadow: 0 0 15px #f81894;
 }
