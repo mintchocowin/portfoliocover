@@ -54,6 +54,26 @@ window.addEventListener("scroll", function buttonshow() {
   }
 });
 
+//time
+
+const currentTime = () => {
+  document.querySelector(".time").innerHTML = new Date().toLocaleTimeString();
+};
+
+const currentDay = () => {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  const dateString = `${year}-${month}-${day}`;
+  document.querySelector(".day").innerHTML = `${dateString}`;
+};
+
+setInterval(currentTime, 1000);
+setInterval(currentDay, 1000);
+currentTime();
+currentDay();
+
 //explanation
 const buttons = document.querySelectorAll(".skills-button ul li");
 

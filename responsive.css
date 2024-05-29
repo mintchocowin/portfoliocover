@@ -60,14 +60,14 @@
     border: 1px solid purple;
   }
   .profile {
-    width: 200px;
-    height: 200px;
-    top: 13%;
+    width: 170px;
+    height: 170px;
+    top: 8%;
     left: 50%;
     transform: translate(-50%);
   }
   .profile-text {
-    top: 45%;
+    top: 50%;
     font-size: 12px;
     left: 50%;
     transform: translate(-50%);
@@ -75,8 +75,8 @@
   }
 
   .profile-text p:nth-child(1) {
-    font-size: 20px;
-    margin-top: -10px;
+    font-size: 11px;
+    margin-top: -50px;
   }
 
   .skills {
@@ -119,6 +119,6 @@
 
   .email i {
     font-size: 300px;
-    margin-top: 70px;
+    margin-top: 20px;
   }
 }
