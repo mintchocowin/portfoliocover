@@ -1,0 +1,7 @@
+[
+  { "id": 1, "description": "html내용" },
+  { "id": 2, "description": "javascript내용" },
+  { "id": 3, "description": "react 내용" },
+  { "id": 4, "description": "typescript 내용" },
+  { "id": 5, "description": "computer science 내용" }
+]

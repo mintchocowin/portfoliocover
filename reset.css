@@ -6,6 +6,13 @@
   src: url("./font/GenEi-P-Heavy_ver8.otf");
 }
 
+@font-face {
+  font-family: "KOTRA_BOLD-Bold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /*reset css*/
 * {
   margin: 0;
