@@ -136,16 +136,3 @@ document
   .addEventListener("click", function () {
     window.location.href = "mailto:" + emailAddress;
   });
-
-//scroll
-
-//scroll json
-(function ($) {
-  $(window).on("load", function () {
-    $(".modal-content").mCustomScrollbar();
-  });
-})(jQuery);
-
-$(".modal-content").mCustomScrollbar({
-  theme: "dark",
-});
