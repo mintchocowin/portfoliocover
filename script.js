@@ -57,7 +57,10 @@ window.addEventListener("scroll", function buttonshow() {
 //time
 
 const currentTime = () => {
-  document.querySelector(".time").innerHTML = new Date().toLocaleTimeString();
+  document.querySelector(".time").innerHTML = new Date().toLocaleTimeString(
+    undefined,
+    { hour: "2-digit", minute: "2-digit" }
+  );
 };
 
 const currentDay = () => {
@@ -73,6 +76,11 @@ setInterval(currentTime, 1000);
 setInterval(currentDay, 1000);
 currentTime();
 currentDay();
+//windows
+
+// 페이지 로드 시 초기 위치 설정
+
+// 윈도우 크기 변경 시 다시 위치 설정
 
 //explanation
 const buttons = document.querySelectorAll(".skills-button ul li");
@@ -128,3 +136,16 @@ document
   .addEventListener("click", function () {
     window.location.href = "mailto:" + emailAddress;
   });
+
+//scroll
+
+//scroll json
+(function ($) {
+  $(window).on("load", function () {
+    $(".modal-content").mCustomScrollbar();
+  });
+})(jQuery);
+
+$(".modal-content").mCustomScrollbar({
+  theme: "dark",
+});

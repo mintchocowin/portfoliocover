@@ -85,7 +85,7 @@ header {
   height: 25%;
 }
 
-.window-icon {
+.icon {
   width: 70px;
   height: 250px;
   position: absolute;
@@ -97,19 +97,22 @@ header {
   align-items: center;
 }
 
-.window-icon > i {
+.icon > i {
+  font-size: 40px;
+}
+.icon > a > i {
   font-size: 50px;
-  color: #fff;
 }
 .windows {
   border: 3px solid #f81894;
   background: #000;
-  width: 70%;
-  height: 65%;
+  width: 400px;
+  height: 240px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 50px;
+  left: 500px;
+  z-index: 100;
+  animation: windowmoving infinite 2s;
 }
 
 .windows-icons {
@@ -122,10 +125,127 @@ header {
 }
 
 .windows-inner {
-  font-size: 35px;
-  padding: 35px;
+  font-size: 20px;
+  padding: 10px;
+}
+@keyframes windowmoving {
+  0% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+.windows2 {
+  border: 3px solid #f81894;
+  position: absolute;
+  top: 200px;
+  right: 30px;
+  width: 300px;
+  height: 330px;
+  overflow: hidden;
+  background-color: #000;
 }
 
+.windows2-inner {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.windows3 {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 60px;
+  left: 120px;
+  border: 3px solid #f81894;
+  background-color: #000;
+}
+.windows3-inner {
+  width: 100%;
+  height: 90%;
+  position: relative;
+}
+.windows3-inner img {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.windows4 {
+  background-color: #000;
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 90px;
+  right: 240px;
+  border: 3px solid #f81894;
+  z-index: 300;
+}
+.windows4-inner {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.windows4-inner p {
+  font-size: 20px;
+}
+
+.windows4-inner div {
+  position: relative;
+  margin-top: 10px;
+  border: 2px solid #f81894;
+  width: 120px;
+  height: 30px;
+}
+
+.windows4-inner div span {
+  display: block;
+  position: absolute;
+  left: 2px;
+  top: 0;
+  width: 0;
+  height: 20px;
+  background-color: #f81894;
+  margin: auto;
+  margin-top: 3px;
+  animation: loading infinite 3s;
+}
+
+@keyframes loading {
+  to {
+    width: 96%;
+  }
+}
+
+.windows5 {
+  background-color: #000;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 30px;
+  left: 140px;
+  border: 3px solid #f81894;
+}
+
+.windows5-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.windows5-inner > img {
+  width: 100%;
+  height: 90%;
+}
 .button {
   cursor: pointer;
 }
@@ -142,10 +262,38 @@ header {
   justify-content: space-between;
 }
 
+.bottom-left {
+  display: flex;
+  align-items: center;
+}
+
 .bottom-left > i {
   font-size: 35px;
-  padding: 5px;
+  margin-left: 13px;
 }
+
+.search {
+  position: relative;
+  margin-left: 20px;
+}
+.search i {
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+  padding-left: 3px;
+}
+.search input {
+  width: 150px;
+  height: 30px;
+  padding-left: 25px;
+  border-radius: 5px;
+  background: whitesmoke;
+  border: 1px solid #fff;
+  outline: none;
+}
+
 .bottom-right {
   display: flex;
   align-items: center;
@@ -153,6 +301,7 @@ header {
 .bottom-right > i {
   font-size: 15px;
   padding: 7px;
+  margin-right: 3px;
 }
 
 .current {
@@ -277,47 +426,105 @@ section .circle ul li:nth-child(3) {
   box-shadow: none;
 }
 
-section > .fa-solid {
+.boxs {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 35px;
-  cursor: pointer;
-}
-section > .fa-solid:hover {
-  color: #f81894;
-}
-.fa-chevron-left {
-  left: 5%;
-}
-.fa-chevron-right {
-  right: 5%;
-}
-.section-context {
-  width: 200%;
-  height: 100%;
-}
-.section-context-main {
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
   height: 90%;
-  display: flex;
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
-.sectionpart-1 {
-  border: 1px solid skyblue;
-  width: 50%;
-  height: inherit;
+.box {
+  width: 160px;
+  height: 170px;
+  border: 2px solid #f81894;
+  border-radius: 5px;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  line-height: 10;
 }
-.sectionpart-2 {
-  border: 1px solid skyblue;
-  width: 50%;
-  height: inherit;
+.modal-windows {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  width: 75%;
+  height: 85%;
+  border: 1px solid #f81894;
+  background-color: #000;
+  border-radius: 5px;
+  /* overflow: auto; */
+  overflow-y: scroll;
+  /* display: none; */
+}
+.modal-windwos::-webkit-scrollbar-track {
+  border: 1px solid #000;
+  padding: 2px 0;
+  background-color: #404040;
 }
 
+.modal-windows::-webkit-scrollbar-track {
+  background: #000 !important;
+  border-radius: 10px;
+}
+
+.modal-windows > .windows-icons {
+  height: 50px;
+  padding: 11px;
+  font-size: 23px;
+}
+
+.modal-content {
+  padding: 30px;
+  padding-top: 45px;
+  position: relative;
+}
+
+.modal-title {
+  display: flex;
+}
+
+.modal-title > p {
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+.modal-title > a {
+  font-size: 16px;
+  margin-top: 28px;
+  margin-left: 20px;
+  border: 2px solid #f81894;
+  width: 42px;
+  height: 30px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.project-skills {
+  margin-bottom: 40px;
+}
+.project-skills > span {
+  border: 2px solid #f81894;
+  border-radius: 20px;
+  padding: 8px;
+  margin-right: 4px;
+}
+.modal-content > img {
+  position: absolute;
+  border: 1px solid #f00;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 40px;
+}
 /*##footer##*/
 footer {
   width: 100%;
   height: 25%;
+  position: relative;
 }
 
 footer .circle ul li:nth-child(4) {
@@ -336,13 +543,13 @@ footer .circle ul li:nth-child(4) {
 .contact-me h1 {
   margin-top: 10px;
   margin-bottom: 40px;
-  font-size: 90px;
+  font-size: 80px;
   color: #fff;
 }
 
 .email i {
   margin-top: 5px;
-  font-size: 400px;
+  font-size: 300px;
   color: #f81894;
   transition: all 0.5s;
 }
@@ -355,6 +562,8 @@ footer .circle ul li:nth-child(4) {
 .sns-icon {
   width: 100%;
   height: 10%;
+  position: absolute;
+  bottom: 0;
   display: flex;
   justify-content: center;
 }
