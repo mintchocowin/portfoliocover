@@ -77,6 +77,30 @@ setInterval(currentDay, 1000);
 currentTime();
 currentDay();
 
+//drag and drop
+
+const draggableElements = document.querySelectorAll(".draggable");
+
+draggableElements.forEach(function (element) {
+  element.addEventListener("mousedown", function (event) {
+    let startX = event.clientX;
+    let startY = event.clientY;
+
+    function onMouseMove(event) {
+      const deltaX = event.clientX - startX;
+      const deltaY = event.clientY - startY;
+      element.style.left = element.offsetLeft + deltaX + "px";
+      element.style.top = element.offsetTop + deltaY + "px";
+      startX = event.clientX;
+      startY = event.clientY;
+    }
+
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", function () {
+      document.removeEventListener("mousemove", onMouseMove);
+    });
+  });
+});
 //explanation
 const buttons = document.querySelectorAll(".skills-button ul li");
 

@@ -1,5 +1,21 @@
 /* tablet */
 @media screen and (max-width: 1200px) {
+  .windows {
+    top: 10%;
+    left: 20%;
+  }
+
+  .windows2 {
+    top: 8%;
+    right: 5%;
+  }
+  .windows3 {
+    display: none;
+  }
+
+  .windows5 {
+    left: 10%;
+  }
   .main-contents {
     width: 95%;
   }
@@ -20,6 +36,10 @@
     width: 150px;
     height: 300px;
   }
+  .box {
+    line-height: 6;
+    font-size: 20px;
+  }
   .modal-windows {
     top: 110px;
     width: 90%;
@@ -33,17 +53,17 @@
     height: 400%;
   }
   header {
-    min-height: 630px;
+    min-height: 650px;
   }
   main {
-    min-height: 630px;
+    max-height: 700px;
   }
   .section {
-    min-height: 630px;
+    max-height: 700px;
   }
 
   .footer {
-    min-height: 630px;
+    max-height: 700px;
   }
   .topbutton {
     bottom: 20px;
@@ -81,7 +101,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -58%);
     width: 300px;
     height: 350px;
     animation: none;
@@ -184,7 +204,8 @@
     justify-self: center;
     align-self: center;
     text-align: center;
-    line-height: 10;
+    line-height: 7;
+    font-size: 20px;
   }
 
   .modal-windows {
@@ -200,6 +221,7 @@
   }
 
   .email i {
-    font-size: 250px;
+    font-size: 300px;
+    margin-top: -10px;
   }
 }
