@@ -76,11 +76,6 @@ setInterval(currentTime, 1000);
 setInterval(currentDay, 1000);
 currentTime();
 currentDay();
-//windows
-
-// 페이지 로드 시 초기 위치 설정
-
-// 윈도우 크기 변경 시 다시 위치 설정
 
 //explanation
 const buttons = document.querySelectorAll(".skills-button ul li");
@@ -94,40 +89,111 @@ buttons.forEach(function (button) {
   });
 });
 // skill json
-// fetch("skills.json")
-//   .then((response) => response.json())
-//   .then((skills) => {
-//     data = skills;
+
+document.addEventListener("DOMContentLoaded", function () {
+  const skillsButton = document.querySelector(".skills-button > ul");
+  const skillsExplanation = document.querySelector(".skills-explanation");
+
+  fetch("skills.json")
+    .then((response) => response.json())
+    .then((data) => {
+      skillsButton.addEventListener("click", function (event) {
+        const target = event.target.closest("li");
+        if (!target) return;
+
+        const skill = target.dataset.skill;
+        const skillInfo = data[skill];
+
+        skillsExplanation.textContent = skillInfo.description;
+
+        const active = document.querySelector(
+          ".skills-button > ul > li.active"
+        );
+        if (active) active.classList.remove("active");
+        target.classList.add("active");
+      });
+
+      const firstSkill = skillsButton.querySelector("li");
+      firstSkill.click();
+    })
+    .catch((error) => console.error("Error fetching JSON:", error));
+});
+//modal
+// const modalsetting = () => {
+//   const modal = document.querySelector(".modal");
+//   const boxs = document.querySelectorAll(".box");
+//   const closeModalIcon = document.querySelector("#xmark");
+//   const section = document.querySelector(".section");
+//   boxs.forEach((box) => {
+//     box.addEventListener("click", function () {
+//       modal.style.display = "block";
+//     });
 //   });
 
-// buttons.forEach((button) => {
-//   const text = document.querySelector(".skills-explanation");
-// });
-//
-fetch("skills.json")
-  .then((response) => response.json())
-  .then((skills) => {
-    // 각 버튼을 선택합니다.
-    const buttons = document.querySelectorAll(".skills-button ul li");
+//   modal.addEventListener("click", function (event) {
+//     if (!event.target.closest(".modal-windows")) {
+//       modal.style.display = "none";
+//     }
+//   });
 
-    // 각 버튼에 클릭 이벤트 리스너를 추가합니다.
-    buttons.forEach((button) => {
-      button.addEventListener("click", function () {
-        // 클릭된 버튼의 텍스트를 가져옵니다.
-        const skillText = this.textContent.trim().toLowerCase();
+//   section.addEventListener("click", function (event) {
+//     console.log(event);
+//     if (event.Target(boxs)) {
+//       modal.style.display = "none";
+//     }
+//   });
 
-        // JSON 데이터에서 해당하는 스킬의 설명을 가져옵니다.
-        const skillDescription = skills.find(
-          (skill) => skill.description.toLowerCase() === skillText
-        )?.description;
+//   closeModalIcon.addEventListener("click", function () {
+//     modal.style.display = "none";
+//   });
+// };
+// modalsetting();
 
-        // 설명을 출력합니다.
-        document.getElementById("skill-description").textContent =
-          skillDescription;
-      });
+//modal new
+document.addEventListener("DOMContentLoaded", function () {
+  const modalTitle = document.querySelector(".modal-title p");
+  const projectSkills = document.querySelector(".project-skills");
+  const projectExplanation = document.querySelector(".project-explanation");
+  const websiteLink = document.querySelector(".website a");
+  const websiteImage = document.querySelector(".website img");
+
+  const jsonFileName = "modal-contents.json"; // JSON 파일 이름
+
+  document.querySelectorAll(".box").forEach(function (box, index) {
+    box.addEventListener("click", function () {
+      fetch(jsonFileName)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          const boxData = data[`box${index + 1}`];
+          modalTitle.textContent = boxData.title;
+          projectSkills.innerHTML = boxData.skills
+            .map((skill) => `<span>${skill}</span>`)
+            .join("");
+          projectExplanation.textContent = boxData.explanation;
+          websiteLink.href = boxData.website.url;
+          websiteImage.src = boxData.website.image;
+          document.querySelector(".modal").style.display = "block";
+        })
+        .catch((error) => console.error("Error fetching JSON:", error));
     });
-  })
-  .catch((error) => console.error("Error fetching skills data:", error));
+  });
+
+  // 모달 닫기
+  const modal = document.querySelector(".modal");
+  document.querySelector("#xmark").addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  document.querySelector(".section").addEventListener("click", function (e) {
+    modal.style.display = "none";
+  });
+});
+
 //email
 const emailAddress = "sliuy59@gmail.com";
 

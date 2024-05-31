@@ -1,0 +1,38 @@
+{
+  "box1": {
+    "title": "Project 1",
+    "skills": ["JavaScript", "HTML", "CSS"],
+    "explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac nisl eget dui hendrerit ullamcorper. Integer rhoncus leo non ex sagittis aliquet.",
+    "website": {
+      "url": "http://example.com/project1",
+      "image": "./images/project1.jpg"
+    }
+  },
+  "box2": {
+    "title": "Project 2",
+    "skills": ["React", "TypeScript"],
+    "explanation": "Vestibulum aliquet fermentum sapien, ac feugiat libero facilisis ut. Maecenas id nisi sed arcu bibendum fermentum.",
+    "website": {
+      "url": "http://example.com/project2",
+      "image": "./images/project2.jpg"
+    }
+  },
+  "box3": {
+    "title": "Project 3",
+    "skills": ["Python", "Django"],
+    "explanation": "Duis commodo nulla sed pretium volutpat. Cras pharetra finibus quam, non tincidunt magna mattis non.",
+    "website": {
+      "url": "http://example.com/project3",
+      "image": "./images/project3.jpg"
+    }
+  },
+  "box4": {
+    "title": "Project 4",
+    "skills": ["Node.js", "Express"],
+    "explanation": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin eget felis sed felis viverra dapibus.",
+    "website": {
+      "url": "http://example.com/project4",
+      "image": "./images/project4.jpg"
+    }
+  }
+}

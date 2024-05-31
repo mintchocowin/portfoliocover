@@ -1,7 +1,17 @@
-[
-  { "id": 1, "description": "html내용" },
-  { "id": 2, "description": "javascript내용" },
-  { "id": 3, "description": "react 내용" },
-  { "id": 4, "description": "typescript 내용" },
-  { "id": 5, "description": "computer science 내용" }
-]
+{
+  "html": {
+    "description": "HTML (Hypertext Markup Language) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript."
+  },
+  "javascript": {
+    "description": "JavaScript is a programming language that is primarily used for scripting web pages and creating interactive web applications."
+  },
+  "react": {
+    "description": "React is a JavaScript library for building user interfaces, developed by Facebook."
+  },
+  "typescript": {
+    "description": "TypeScript is a superset of JavaScript that adds static typing and other features to the language."
+  },
+  "computerScience": {
+    "description": "Computer science is the study of algorithmic processes, computational machines, and computation itself."
+  }
+}
