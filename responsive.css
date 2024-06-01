@@ -35,11 +35,10 @@
   .box {
     width: 150px;
     height: 300px;
-  }
-  .box {
-    line-height: 6;
+    line-height: 32;
     font-size: 20px;
   }
+
   .modal-windows {
     top: 110px;
     width: 90%;
@@ -147,14 +146,13 @@
     font-size: 12px;
     left: 50%;
     transform: translate(-50%);
-    width: 100%;
+    width: 80%;
   }
 
   .profile-text p:nth-child(1) {
     font-size: 11px;
     margin-top: -50px;
   }
-
   .skills {
     width: 100%;
     top: 63%;
@@ -204,7 +202,7 @@
     justify-self: center;
     align-self: center;
     text-align: center;
-    line-height: 7;
+    line-height: 18;
     font-size: 20px;
   }
 

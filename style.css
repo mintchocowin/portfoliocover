@@ -460,8 +460,30 @@ section .circle ul li:nth-child(3) {
   justify-self: center;
   align-self: center;
   text-align: center;
-  line-height: 10;
+  line-height: 25;
   font-size: 35px;
+  opacity: 0.6;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.box:hover {
+  opacity: 0.8;
+}
+.box:nth-child(1) {
+  background: url("./image/map.png") center/cover no-repeat;
+}
+
+.box:nth-child(2) {
+  background: url("./image/weather.png") center/cover no-repeat;
+}
+
+.box:nth-child(3) {
+  background: url("./image/catmbti.png") center/cover no-repeat;
+}
+
+.box:nth-child(4) {
+  background: url("./image/todolist.png") center/cover no-repeat;
 }
 
 .modal {

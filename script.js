@@ -142,36 +142,6 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch((error) => console.error("Error fetching JSON:", error));
 });
-//modal
-// const modalsetting = () => {
-//   const modal = document.querySelector(".modal");
-//   const boxs = document.querySelectorAll(".box");
-//   const closeModalIcon = document.querySelector("#xmark");
-//   const section = document.querySelector(".section");
-//   boxs.forEach((box) => {
-//     box.addEventListener("click", function () {
-//       modal.style.display = "block";
-//     });
-//   });
-
-//   modal.addEventListener("click", function (event) {
-//     if (!event.target.closest(".modal-windows")) {
-//       modal.style.display = "none";
-//     }
-//   });
-
-//   section.addEventListener("click", function (event) {
-//     console.log(event);
-//     if (event.Target(boxs)) {
-//       modal.style.display = "none";
-//     }
-//   });
-
-//   closeModalIcon.addEventListener("click", function () {
-//     modal.style.display = "none";
-//   });
-// };
-// modalsetting();
 
 //modal new
 document.addEventListener("DOMContentLoaded", function () {

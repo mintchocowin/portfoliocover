@@ -4,8 +4,8 @@
     "skills": ["HTML", "CSS", "JavaScript"],
     "explanation": "json 파일로 수많은 데이터들을 관리하였습니다. pager를 통해 사용자들에게 편의를 제공하였습니다. filter함수를 통해 매장을 빠르게 찾을 수 있게 하였습니다. ",
     "website": {
-      "url": "http://example.com/project1",
-      "image": "./images/project1.jpg"
+      "url": "",
+      "image": "./image/map.png"
     }
   },
   "box2": {
@@ -13,8 +13,8 @@
     "skills": ["React"],
     "explanation": "env 파일의 사용하여 개인정보를 보호하였습니다. useState훅으로 상태변화에 빠르게 반응하여 화면구현이 될 수 있게 하였습니다. react에서 api 가져올 수 있게 했습니다. ",
     "website": {
-      "url": "http://example.com/project2",
-      "image": "./images/project2.jpg"
+      "url": "",
+      "image": "./image/weather.png"
     }
   },
   "box3": {
@@ -22,8 +22,8 @@
     "skills": ["React"],
     "explanation": "useNavaigate를 통해 화면 전환을 용이하게 하였다. useSearchParams로 URL의 쿼리 매개변수에 접근 할 수 있었습니다. useParams와 useSearchParams의 차이점을 알게 되었습니다.   ",
     "website": {
-      "url": "http://example.com/project3",
-      "image": "./images/project3.jpg"
+      "url": "",
+      "image": "./image/catmbti.png"
     }
   },
   "box4": {
@@ -31,8 +31,8 @@
     "skills": ["TypeScript"],
     "explanation": "Recoil을 통해 각 카테고리 별로 상태관리를 했습니다. beautiful DND 라이브러리로 사용자에게 직관적이고 효율적인 방식으로 To do list 관리를 용이하게 하였습니다.",
     "website": {
-      "url": "http://example.com/project4",
-      "image": "./images/project4.jpg"
+      "url": "",
+      "image": "./image/todolist.png"
     }
   }
 }
