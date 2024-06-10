@@ -23,8 +23,8 @@ window.addEventListener("scroll", function buttonshow() {
 
 const currentTime = () => {
   document.querySelector(".time").innerHTML = new Date().toLocaleTimeString(
-    undefined,
-    { hour: "2-digit", minute: "2-digit" }
+undefined,
+    { hour: "2-digit", minute: "2-digit", hour12:true }
   );
 };
 
@@ -105,17 +105,7 @@ document
     });
   });
   
-//explanation
-const buttons = document.querySelectorAll(".skills-button ul li");
 
-buttons.forEach(function (button) {
-  button.addEventListener("click", function () {
-    buttons.forEach(function (button) {
-      button.classList.remove("active");
-    });
-    button.classList.add("active");
-  });
-});
 // skill json
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -155,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const websiteLink = document.querySelector(".website a");
   const websiteImage = document.querySelector(".website img");
 
-  const jsonFileName = "modal-contents.json"; // JSON 파일 이름
+  const jsonFileName = "modal-contents.json"; 
 
   document.querySelectorAll(".box").forEach(function (box, index) {
     box.addEventListener("click", function () {
@@ -181,13 +171,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // 모달 닫기
+  // modal close
   const modal = document.querySelector(".modal");
   document.querySelector("#xmark").addEventListener("click", function () {
     modal.style.display = "none";
   });
 
-  document.querySelector(".section").addEventListener("click", function (e) {
+  document.querySelector(".section").addEventListener("click", function () {
     modal.style.display = "none";
   });
 });
