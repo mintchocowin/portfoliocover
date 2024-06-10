@@ -303,7 +303,11 @@ header {
   border-radius: 5px;
   background: whitesmoke;
   border: 1px solid #fff;
-  outline: none;
+  /* outline: none; */
+}
+
+.search input:focus .fa-magnifying-glass {
+  color: #f81894
 }
 
 .bottom-right {
@@ -373,7 +377,7 @@ main .circle ul li:nth-child(2) {
 }
 
 .profile-text {
-  font-family: "KOTRA_BOLD-Bold";
+ 
   width: 50%;
   height: 150px;
   position: absolute;
@@ -384,8 +388,13 @@ main .circle ul li:nth-child(2) {
 }
 
 .profile-text p:nth-child(1) {
+  font-family: "KOTRA_BOLD-Bold";
   margin-bottom: 30px;
   font-size: 24px;
+}
+.profile-text p:nth-child(2) {
+  font-family: 'KOTRA_GOTHIC';
+
 }
 .skills {
   position: absolute;
@@ -419,14 +428,13 @@ main .circle ul li:nth-child(2) {
 
 .skills-explanation {
   border: 3px solid #f81894;
+  font-family: 'KOTRA_GOTHIC';
   line-height: 1.5;
   border-radius: 10px;
   width: 100%;
   height: 76%;
   margin-top: 38px;
-  padding: 10px;
-  text-align: justify;
-  font-family: "KOTRA_BOLD-Bold";
+  padding: 10px; 
 }
 
 /*##section##*/

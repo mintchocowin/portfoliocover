@@ -1,39 +1,4 @@
-//menu button
 
-document.querySelector(".button").addEventListener("click", function () {
-  document.querySelector("main").scrollIntoView({ behavior: "smooth" });
-});
-
-document
-  .querySelectorAll(".circle ul li:nth-child(1)")
-  .forEach(function (click) {
-    click.addEventListener("click", function () {
-      document.querySelector("header").scrollIntoView({ behavior: "smooth" });
-    });
-  });
-
-document
-  .querySelectorAll(".circle ul li:nth-child(2)")
-  .forEach(function (click) {
-    click.addEventListener("click", function () {
-      document.querySelector("main").scrollIntoView({ behavior: "smooth" });
-    });
-  });
-
-document
-  .querySelectorAll(".circle ul li:nth-child(3)")
-  .forEach(function (click) {
-    click.addEventListener("click", function () {
-      document.querySelector("section").scrollIntoView({ behavior: "smooth" });
-    });
-  });
-document
-  .querySelectorAll(".circle ul li:nth-child(4)")
-  .forEach(function (click) {
-    click.addEventListener("click", function () {
-      document.querySelector("footer").scrollIntoView({ behavior: "smooth" });
-    });
-  });
 //topbutton
 const topbutton = document.querySelector(".topbutton");
 
@@ -71,7 +36,6 @@ const currentDay = () => {
   const dateString = `${year}-${month}-${day}`;
   document.querySelector(".day").innerHTML = `${dateString}`;
 };
-
 setInterval(currentTime, 1000);
 setInterval(currentDay, 1000);
 currentTime();
@@ -101,6 +65,46 @@ draggableElements.forEach(function (element) {
     });
   });
 });
+
+
+
+//menu button
+
+document.querySelector(".button").addEventListener("click", function () {
+  document.querySelector("main").scrollIntoView({ behavior: "smooth" });
+});
+
+document
+  .querySelectorAll(".circle ul li:nth-child(1)")
+  .forEach(function (click) {
+    click.addEventListener("click", function () {
+      document.querySelector("header").scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+document
+  .querySelectorAll(".circle ul li:nth-child(2)")
+  .forEach(function (click) {
+    click.addEventListener("click", function () {
+      document.querySelector("main").scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+document
+  .querySelectorAll(".circle ul li:nth-child(3)")
+  .forEach(function (click) {
+    click.addEventListener("click", function () {
+      document.querySelector("section").scrollIntoView({ behavior: "smooth" });
+    });
+  });
+document
+  .querySelectorAll(".circle ul li:nth-child(4)")
+  .forEach(function (click) {
+    click.addEventListener("click", function () {
+      document.querySelector("footer").scrollIntoView({ behavior: "smooth" });
+    });
+  });
+  
 //explanation
 const buttons = document.querySelectorAll(".skills-button ul li");
 
