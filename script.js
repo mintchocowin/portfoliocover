@@ -45,16 +45,16 @@ currentDay();
 
 const draggableElements = document.querySelectorAll(".draggable");
 
-draggableElements.forEach(function (element) {
-  element.addEventListener("mousedown", function (event) {
+draggableElements.forEach(function (windows) {
+  windows.addEventListener("mousedown", function (event) {
     let startX = event.clientX;
     let startY = event.clientY;
 
     function onMouseMove(event) {
       const deltaX = event.clientX - startX;
       const deltaY = event.clientY - startY;
-      element.style.left = element.offsetLeft + deltaX + "px";
-      element.style.top = element.offsetTop + deltaY + "px";
+      windows.style.left = windows.offsetLeft + deltaX + "px";
+      windows.style.top = windows.offsetTop + deltaY + "px";
       startX = event.clientX;
       startY = event.clientY;
     }
@@ -76,31 +76,31 @@ document.querySelector(".button").addEventListener("click", function () {
 
 document
   .querySelectorAll(".circle ul li:nth-child(1)")
-  .forEach(function (click) {
-    click.addEventListener("click", function () {
+  .forEach(function (buttons) {
+    buttons.addEventListener("click", function () {
       document.querySelector("header").scrollIntoView({ behavior: "smooth" });
     });
   });
 
 document
   .querySelectorAll(".circle ul li:nth-child(2)")
-  .forEach(function (click) {
-    click.addEventListener("click", function () {
+  .forEach(function (buttons) {
+    buttons.addEventListener("click", function () {
       document.querySelector("main").scrollIntoView({ behavior: "smooth" });
     });
   });
 
 document
   .querySelectorAll(".circle ul li:nth-child(3)")
-  .forEach(function (click) {
-    click.addEventListener("click", function () {
+  .forEach(function (buttons) {
+    buttons.addEventListener("click", function () {
       document.querySelector("section").scrollIntoView({ behavior: "smooth" });
     });
   });
 document
   .querySelectorAll(".circle ul li:nth-child(4)")
-  .forEach(function (click) {
-    click.addEventListener("click", function () {
+  .forEach(function (buttons) {
+    buttons.addEventListener("click", function () {
       document.querySelector("footer").scrollIntoView({ behavior: "smooth" });
     });
   });
