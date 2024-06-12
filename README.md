@@ -16,9 +16,9 @@ Portfolio
 
 Front: Javascript
 
-## 배포: Firebase
+배포: Firebase
 
-
+##
 
 👩🏼‍🔧 개선해야 할 점
 
